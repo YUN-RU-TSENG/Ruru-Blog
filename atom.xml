@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/YUN-RU-TSENG/"/>
-  <updated>2020-10-04T06:25:43.601Z</updated>
+  <updated>2020-10-04T06:53:11.991Z</updated>
   <id>https://github.com/YUN-RU-TSENG/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Github 上的 Dependabot alerts 是什麼？</title>
-    <link href="https://github.com/YUN-RU-TSENG/archives/2020/10/Github-%E4%B8%8A%E7%9A%84-Dependabot-alerts-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F/"/>
-    <id>https://github.com/YUN-RU-TSENG/archives/2020/10/Github-%E4%B8%8A%E7%9A%84-Dependabot-alerts-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F/</id>
+    <title>Github 上的 Dependabot alerts 介紹</title>
+    <link href="https://github.com/YUN-RU-TSENG/archives/2020/10/Github-Dependabot-alerts/"/>
+    <id>https://github.com/YUN-RU-TSENG/archives/2020/10/Github-Dependabot-alerts/</id>
     <published>2020-10-04T13:27:47.000Z</published>
-    <updated>2020-10-04T06:25:43.601Z</updated>
+    <updated>2020-10-04T06:53:11.991Z</updated>
     
     <content type="html"><![CDATA[<p>在使用 github 時，有時候在項目中會收到 Dependabot alerts <strong>安全警報</strong>，在下列 <code>security</code> <code>Dependabot alerts</code> 中，會有如下列的 Dependabot alerts 警告項目，這個警告其實是 Github 在安全性上的功能之一。</p><a id="more"></a><p>進入 <code>security</code> 中，可以看到 <code>Dependabot alerts</code><br><img src="https://i.imgur.com/569XT0S.jpg" alt=""></p><p>那麼先來看 Github <a href="https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-alerts-for-vulnerable-dependencies" target="_blank" rel="noopener">官網</a>上關於 Dependabot alerts 的描述：</p><blockquote><p>GitHub detects and alerts users to vulnerable dependencies in public repositories by default. Owners of private repositories, or people with admin access, can enable GitHub Dependabot alerts by enabling the dependency graph and GitHub Dependabot alerts for their repositories.</p></blockquote><p>簡單來說，這個功能來源於 <strong>Github</strong> 2017 推出的安全警報功能，默認情況下可以自動掃描公共庫（私有庫不會，要額外開啟設定）中的依賴項目，例如 <code>lodash</code> 等，並且查詢相關的依賴項目是否有任何漏洞，一旦發現便會通過 <strong>自動通知</strong> 向用戶發出警告。</p><h2 id="Dependabot-alerts-檢測："><a href="#Dependabot-alerts-檢測：" class="headerlink" title="Dependabot alerts 檢測："></a>Dependabot alerts 檢測：</h2><p>對於依賴項目檢測到以下情況 Github 會發出 Dependabot alerts：</p><table><thead><tr><th>情況</th></tr></thead><tbody><tr><td>A new vulnerability is added to the GitHub Advisory Database. For more information, see “ Browsing security vulnerabilities in the GitHub Advisory Database.”</td></tr><tr><td>New vulnerability data from WhiteSource is processed.</td></tr><tr><td>The dependency graph for a repository changes. For example, when a contributor pushes a commit to change the packages or versions it depends on, or when the code of one of the dependencies changes. For more information, see “ About the dependency graph.”</td></tr></tbody></table><h2 id="如何解決-Dependabot-alerts"><a href="#如何解決-Dependabot-alerts" class="headerlink" title="如何解決 Dependabot alerts"></a>如何解決 Dependabot alerts</h2><p>項目的 Dependabot alerts 解決的最簡單方式，Github 也有提供，在 Dependabot alerts 發送同時，也同時發送了可以解決依賴項目漏洞的最低版本更新的 (minimum ver) <code>pull request</code>，以我的項目為例，點擊進入 Dependabot alerts 後，可以看到相關的 alert，我們選擇 <code>lodash</code> 進入</p><p><img src="https://i.imgur.com/zbhj8K0.jpg" alt=""></p><p>點擊進入後可以看到 Dependabot alerts 提供的 <code>pull request</code> <strong>Bump lodash from 4.17.15 to 4.17.19</strong>，透過 <code>merge</code> 該 <code>request</code>，該漏洞便能解決。裡面詳細記錄了漏洞問題。<br><img src="https://i.imgur.com/XrGbD5M.jpg" alt=""></p><div class="danger">有時候會遇到 alert 沒有自動提 <code>pull request</code> 的情況。這個時候就得依照 alert 給出的提示，找出原因。<img src="https://i.imgur.com/nrGUBuA.jpg">點擊進入後會有詳細介紹：以本範例來說，Dependabot alerts 無法提 <code>pull request</code> 的原因是由於其他依賴項目的不兼容。<img src="https://i.imgur.com/JHcKEn7.jpg"></div><hr><h2 id="資料來源："><a href="#資料來源：" class="headerlink" title="資料來源："></a>資料來源：</h2><p><a href="https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-alerts-for-vulnerable-dependencies" target="_blank" rel="noopener">About alerts for vulnerable dependencies - GitHub Docs</a><br><a href="https://dumbcatnote.blogspot.com/2019/11/github-dependabot-pull-request.html" target="_blank" rel="noopener">Git GitHub Dependabot自動建立Pull Request修正安全性漏洞</a><br><a href="https://www.infoq.com/news/2017/11/githhub-security-alerts/" target="_blank" rel="noopener">GitHub Launches Security Alerts</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;在使用 github 時，有時候在項目中會收到 Dependabot alerts &lt;strong&gt;安全警報&lt;/strong&gt;，在下列 &lt;code&gt;security&lt;/code&gt; &lt;code&gt;Dependabot alerts&lt;/code&gt; 中，會有如下列的 Dependabot alerts 警告項目，這個警告其實是 Github 在安全性上的功能之一。&lt;/p&gt;
+      Github 上的 Dependabot alerts 是什麼？在使用 github 時，有時候在項目中會收到 Dependabot alerts **安全警報**，在下列 `security` `Dependabot alerts` 中，會有如下列的 Dependabot alerts 警告項目，這個警告其實是 Github 在安全性上的功能之一。
     
     </summary>
     
