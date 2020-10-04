@@ -39,21 +39,7 @@
 
   
   <url>
-    <loc>https://yun-ru-tseng.github.io/Ruru-Blog/tags/github/</loc>
-    <lastmod>2020-10-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yun-ru-tseng.github.io/Ruru-Blog/tags/Dependabot/</loc>
-    <lastmod>2020-10-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yun-ru-tseng.github.io/Ruru-Blog/tags/Dependabot-alert/</loc>
+    <loc>https://yun-ru-tseng.github.io/Ruru-Blog/tags/github-Dependabot-Dependabot-alert/</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
