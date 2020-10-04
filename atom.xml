@@ -5,9 +5,9 @@
   <subtitle>Ruru Front-End-note</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://github.com/YUN-RU-TSENG/"/>
+  <link href="https://github.com/YUN-RU-TSENG/Ruru-Blog/"/>
   <updated>2020-10-04T06:53:11.991Z</updated>
-  <id>https://github.com/YUN-RU-TSENG/</id>
+  <id>https://github.com/YUN-RU-TSENG/Ruru-Blog/</id>
   
   <author>
     <name>[object Object]</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Github 上的 Dependabot alerts 介紹</title>
-    <link href="https://github.com/YUN-RU-TSENG/Github-Dependabot-alerts/"/>
-    <id>https://github.com/YUN-RU-TSENG/Github-Dependabot-alerts/</id>
+    <link href="https://github.com/YUN-RU-TSENG/Ruru-Blog/Github-Dependabot-alerts/"/>
+    <id>https://github.com/YUN-RU-TSENG/Ruru-Blog/Github-Dependabot-alerts/</id>
     <published>2020-10-04T13:27:47.000Z</published>
     <updated>2020-10-04T06:53:11.991Z</updated>
     
@@ -33,11 +33,11 @@
     
     
     
-      <category term="github" scheme="https://github.com/YUN-RU-TSENG/tags/github/"/>
+      <category term="github" scheme="https://github.com/YUN-RU-TSENG/Ruru-Blog/tags/github/"/>
     
-      <category term="Dependabot" scheme="https://github.com/YUN-RU-TSENG/tags/Dependabot/"/>
+      <category term="Dependabot" scheme="https://github.com/YUN-RU-TSENG/Ruru-Blog/tags/Dependabot/"/>
     
-      <category term="Dependabot alert" scheme="https://github.com/YUN-RU-TSENG/tags/Dependabot-alert/"/>
+      <category term="Dependabot alert" scheme="https://github.com/YUN-RU-TSENG/Ruru-Blog/tags/Dependabot-alert/"/>
     
   </entry>
   

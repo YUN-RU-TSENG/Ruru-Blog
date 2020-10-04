@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://github.com/YUN-RU-TSENG/Github-Dependabot-alerts/</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog/Github-Dependabot-alerts/</loc>
     
     <lastmod>2020-10-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://github.com/YUN-RU-TSENG/googledf8747eea6aa49cd</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog/googledf8747eea6aa49cd</loc>
     
     <lastmod>2020-10-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://github.com/YUN-RU-TSENG/data/contact.json</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog/data/contact.json</loc>
     
     <lastmod>2020-06-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://github.com/YUN-RU-TSENG/404</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog/404</loc>
     
     <lastmod>2020-06-12</lastmod>
     
@@ -31,7 +31,7 @@
   
 
   <url>
-    <loc>https://github.com/YUN-RU-TSENG</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -39,21 +39,21 @@
 
   
   <url>
-    <loc>https://github.com/YUN-RU-TSENG/tags/github/</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog/tags/github/</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/YUN-RU-TSENG/tags/Dependabot/</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog/tags/Dependabot/</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/YUN-RU-TSENG/tags/Dependabot-alert/</loc>
+    <loc>https://github.com/YUN-RU-TSENG/Ruru-Blog/tags/Dependabot-alert/</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
