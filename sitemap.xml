@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/YUN-RU-TSENG/archives/2020/10/Github-%E4%B8%8A%E7%9A%84-Dependabot-alerts-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/YUN-RU-TSENG/data/contact.json</loc>
     
     <lastmod>2020-06-12</lastmod>
@@ -23,6 +30,27 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://github.com/YUN-RU-TSENG/tags/github/</loc>
+    <lastmod>2020-10-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/YUN-RU-TSENG/tags/Dependabot/</loc>
+    <lastmod>2020-10-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/YUN-RU-TSENG/tags/Dependabot-alert/</loc>
+    <lastmod>2020-10-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 
   
