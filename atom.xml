@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ruru-Front-End-Blog</title>
   
-  <subtitle>Ruru Front-End-note</subtitle>
+  <subtitle>Ruru 前端筆記</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yun-ru-tseng.github.io/Ruru-Blog/"/>
