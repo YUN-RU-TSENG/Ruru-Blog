@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yun-ru-tseng.github.io/Ruru-Blog/Vue-component-with-v-model/</loc>
+    
+    <lastmod>2020-10-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yun-ru-tseng.github.io/Ruru-Blog/Github-Dependabot-alerts/</loc>
     
     <lastmod>2020-10-04</lastmod>
@@ -32,7 +39,7 @@
 
   <url>
     <loc>https://yun-ru-tseng.github.io/Ruru-Blog</loc>
-    <lastmod>2020-10-04</lastmod>
+    <lastmod>2020-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -40,7 +47,14 @@
   
   <url>
     <loc>https://yun-ru-tseng.github.io/Ruru-Blog/tags/github-Dependabot-Dependabot-alert/</loc>
-    <lastmod>2020-10-04</lastmod>
+    <lastmod>2020-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yun-ru-tseng.github.io/Ruru-Blog/tags/v-model-vue-component/</loc>
+    <lastmod>2020-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

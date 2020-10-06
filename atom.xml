@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yun-ru-tseng.github.io/Ruru-Blog/"/>
-  <updated>2020-10-04T12:02:55.773Z</updated>
+  <updated>2020-10-06T16:02:56.602Z</updated>
   <id>https://yun-ru-tseng.github.io/Ruru-Blog/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue component with v-model</title>
+    <link href="https://yun-ru-tseng.github.io/Ruru-Blog/Vue-component-with-v-model/"/>
+    <id>https://yun-ru-tseng.github.io/Ruru-Blog/Vue-component-with-v-model/</id>
+    <published>2020-10-06T23:55:28.000Z</published>
+    <updated>2020-10-06T16:02:56.602Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="v-model-✐"><a href="#v-model-✐" class="headerlink" title="v-model ✐"></a>v-model ✐</h2><p><code>v-model</code> 作用於表單元件上時，是 <strong>雙向數據綁定</strong> 的語法糖：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input v-model&#x3D;&quot;number&quot;&gt;</span><br></pre></td></tr></table></figure><p>等價於 <code>v-bind=&quot;number&quot;</code> 以及 <code>@input=&quot;number = $event.target.value&quot;</code> 兩者：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input :value&#x3D;&quot;number&quot;</span><br><span class="line">       @input&#x3D;&quot;number &#x3D; $event.target.value&quot;&gt;</span><br></pre></td></tr></table></figure><h2 id="component-上使用-v-model"><a href="#component-上使用-v-model" class="headerlink" title="component 上使用 v-model"></a>component 上使用 v-model</h2><p>不作用於表單元件，而是作用於 component 時，則下列程式碼：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component v-model&#x3D;&quot;number&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure><p>等價於：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component :value&#x3D;&quot;number&quot;</span><br><span class="line">              @input&#x3D;&quot;number &#x3D; $event&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure><p>若是需要在組件使用 <code>v-model</code> 語法，組件需要設定 <code>prop</code>、<code>自定義事件</code>：</p><p><img src="https://i.imgur.com/rcaefRJ.gif" alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 子組件</span><br><span class="line">Vue.component(&quot;my-component&quot;, &#123;</span><br><span class="line">  props: [&quot;value&quot;],</span><br><span class="line">  template: &#96;&lt;input :value&#x3D;&quot;value&quot; @input&#x3D;&quot;$emit(&#39;input&#39;, $event.target.value)&quot;&gt;&#96;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 父組件</span><br><span class="line">const vm &#x3D; new Vue(&#123;</span><br><span class="line">  el: &quot;.app&quot;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    number: 0</span><br><span class="line">  &#125;,</span><br><span class="line">  template: &#96;</span><br><span class="line">&lt;div class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">  &lt;my-component v-model&#x3D;&quot;number&quot;&#x2F;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; number &#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;&#x2F;div&gt;&#96;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://codepen.io/yunru1230/pen/PozYXgW?editors=1011" target="_blank" rel="noopener">codepen example</a></p></blockquote><p>上方程式碼配合 <code>v-model</code> 進行如下設定，便可以將數據自 <code>父組件</code> 傳入 <code>子組件</code>，<code>子組件</code> 也可以透過 <code>自定義事件</code> 拋出數據給 <code>父組件</code>：</p><ul><li>在 <code>子組件</code> 註冊名為 <code>value</code> 的 <code>prop</code></li><li><code>子組件</code> 在 <code>input</code> 觸發時需定義自定義事件 <code>input</code>，並且設置要傳出的 <code>子組件</code> 數據</li></ul><p>以上為此次內容，感謝看到這裡的你，我們明天見。</p><hr><p>若是文中有任何錯誤、錯字、想討論的內容，歡迎各位大大不吝鞭笞指正、交流分享，筆者不慎感激 ✦ ✦ ✦</p><p>▶︎ 筆者 github：<a href="https://github.com/YUN-RU-TSENG" target="_blank" rel="noopener">https://github.com/YUN-RU-TSENG</a><br>▶︎ 老王賣瓜之筆者另一篇鐵人：<a href="https://ithelp.ithome.com.tw/users/20111825/ironman/2549" target="_blank" rel="noopener">每天來點 CSS Specification</a></p><p>▶︎ 倘若不斷向深處扎根，似乎就能茁壯成長 - <a href="https://www.youtube.com/watch?v=E30APZxHh4c" target="_blank" rel="noopener">RM</a></p><hr><h3 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h3><ol><li><a href="https://vuejs.org/v2/guide/index.html" target="_blank" rel="noopener">Vuejs.org 2.x</a></li><li><a href="https://www.youtube.com/watch?v=dw2oFaLu5II" target="_blank" rel="noopener"> 想入門，我陪你  Re Vue 重頭說起｜Day 11：組件自定事件與通知 - YouTube</a></li><li><a href="https://dwatow.github.io/2018/09-21-vuejs/vue-component-with-v-model/" target="_blank" rel="noopener">Vue Component 也可以用 v-model - 《Chris 技術筆記》</a></li><li><a href="https://paulund.co.uk/use-v-model-on-custom-vue-component#:~:text=The%20v%2Dmodel%20attribute%20is,to%20record%20the%20user%20input." target="_blank" rel="noopener">Use v-model On Custom Vue Component - Paulund</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      customizing component v-model
+    
+    </summary>
+    
+    
+    
+      <category term="v-model, vue, component" scheme="https://yun-ru-tseng.github.io/Ruru-Blog/tags/v-model-vue-component/"/>
+    
+  </entry>
   
   <entry>
     <title>Github Dependabot alerts 介紹</title>
